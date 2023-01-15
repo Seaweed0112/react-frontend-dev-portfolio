@@ -98,6 +98,7 @@ class App extends Component {
               data-icon="twemoji-flag-for-flag-united-kingdom"
               data-inline="false"
               id={window.$primaryLanguageIconId}
+              display="none"
             ></span>
           </div>
           <div
@@ -114,6 +115,7 @@ class App extends Component {
               data-icon="twemoji-flag-for-flag-poland"
               data-inline="false"
               id={window.$secondaryLanguageIconId}
+              display="none"
             ></span>
           </div>
         </div>
@@ -134,7 +136,7 @@ class App extends Component {
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
         <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
-      </div>
+      </div >
     );
   }
 }
