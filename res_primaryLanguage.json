@@ -13,16 +13,15 @@
     {
       "title": "HTTP Server",
       "startDate": "2023",
-      "description": "simple http server",
+      "description": "Simple HTTP server",
       "images": [
-        "images/portfolio/animal-shelter/p1.jpg",
-        "images/portfolio/animal-shelter/p2.jpg"
+        "images/portfolio/simple_http_server/p1.png"
       ],
-      "url": "",
+      "url": "https://github.com/Seaweed0112/simple-c-http-server",
       "technologies": [
         {
-          "class": "devicon-java-plain",
-          "name": "Java"
+          "class": "devicon-cplusplus-plain",
+          "name": "C++"
         }
       ]
     },
@@ -31,10 +30,9 @@
       "startDate": "2022",
       "description": "Project during AI for engineer course",
       "images": [
-        "images/portfolio/photography/p1.jpg",
-        "images/portfolio/photography/p2.jpg"
+        "images/portfolio/vgg/p1.png"
       ],
-      "url": "https://github.com",
+      "url": "https://github.com/Seaweed0112/VGG-MNISTfashion",
       "technologies": [
         {
           "class": "devicon-pytorch-original",
@@ -51,10 +49,9 @@
       "startDate": "2022",
       "description": "Project during Cryptography and Network Security course",
       "images": [
-        "images/portfolio/adventure/p1.jpg",
-        "images/portfolio/adventure/p2.jpg"
+        "images/portfolio/crypto/p1.png"
       ],
-      "url": "https://github.com",
+      "url": "https://github.com/Seaweed0112/rfid_project",
       "technologies": [
         {
           "class": "devicon-python-plain",
