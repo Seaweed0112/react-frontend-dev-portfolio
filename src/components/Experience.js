@@ -50,7 +50,7 @@ class Experience extends Component {
               color: "#fff",
               textAlign: "center",
             }}
-            icon={<i className="fas fa-code experience-icon"></i>}
+            icon={<i className="far fa-code experience-icon"></i>}
             key={i}
           >
             <div onClick={() => detailsModalShow(work)}>
