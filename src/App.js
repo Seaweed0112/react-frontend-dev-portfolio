@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import $ from "jquery";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -7,93 +6,81 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import { Link, Element, scroller } from 'react-scroll'
+import { Link, Element } from 'react-scroll'
 
 
-class App extends Component {
+function App() {
+  const [resumeData, setResumeData] = useState(new Map());
+  const [sharedData, setSharedData] = useState(new Map());
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  constructor(props) {
-    super();
-    this.state = {
-      foo: "bar",
-      resumeData: {},
-      sharedData: {},
-    };
+  useEffect(() => {
+    loadSharedData();
+    var resumePath = `res_primaryLanguage.json`;
+    loadResumeFromPath(resumePath);
+    return () => {
+    }
+  }, []);
+
+  const loadResumeFromPath = (path) => {
+    fetch(path)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setResumeData(result);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      )
   }
 
-
-  scrollTo() {
-    scroller.scrollTo('scroll-to-element', {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeInOutQuart'
-    })
+  const loadSharedData = () => {
+    fetch(`portfolio_shared_data.json`)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setSharedData(result);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      )
   }
 
-  applyPickedLanguage(pickedLanguage, oppositeLangIconId) {
-    this.swapCurrentlyActiveLanguage(oppositeLangIconId);
-    document.documentElement.lang = pickedLanguage;
-    var resumePath =
-      document.documentElement.lang === window.$primaryLanguage
-        ? `res_primaryLanguage.json`
-        : `res_secondaryLanguage.json`;
-    this.loadResumeFromPath(resumePath);
+  const [scrolled, setScrolled] = React.useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
+  let x = ["navigation-wrapper"];
+  if (scrolled) {
+    x.push("scrolled");
   }
 
-  swapCurrentlyActiveLanguage(oppositeLangIconId) {
-    var pickedLangIconId =
-      oppositeLangIconId === window.$primaryLanguageIconId
-        ? window.$secondaryLanguageIconId
-        : window.$primaryLanguageIconId;
-    document
-      .getElementById(oppositeLangIconId)
-      .removeAttribute("filter", "brightness(40%)");
-    document
-      .getElementById(pickedLangIconId)
-      .setAttribute("filter", "brightness(40%)");
-  }
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  } else if (!isLoaded) {
+    return <div>Loading...</div>;
+  } else {
 
-  componentDidMount() {
-    this.loadSharedData();
-    this.applyPickedLanguage(
-      window.$primaryLanguage,
-      window.$secondaryLanguageIconId
-    );
-  }
-
-  loadResumeFromPath(path) {
-    $.ajax({
-      url: path,
-      dataType: "json",
-      cache: false,
-      success: function (data) {
-        this.setState({ resumeData: data });
-      }.bind(this),
-      error: function (xhr, status, err) {
-        alert(err);
-      },
-    });
-  }
-
-  loadSharedData() {
-    $.ajax({
-      url: `portfolio_shared_data.json`,
-      dataType: "json",
-      cache: false,
-      success: function (data) {
-        this.setState({ sharedData: data });
-        document.title = `${this.state.sharedData.basic_info.name}`;
-      }.bind(this),
-      error: function (xhr, status, err) {
-        alert(err);
-      },
-    });
-  }
-
-  render() {
     return (
       <div>
-        <nav>
+        <nav className={x.join(" ")}>
           <div className="navigation-wrapper nav navbar-nav">
             <Link activeClass="active" className="navigation-link about" to="about" spy={true} smooth={true} duration={500} >About</Link>
             <Link activeClass="active" className="navigation-link projects" to="projects" spy={true} smooth={true} duration={500}>Projects</Link>
@@ -101,15 +88,9 @@ class App extends Component {
             <Link activeClass="active" className="navigation-link experience" to="experience" spy={true} smooth={true} duration={500}>Experience</Link>
           </div>
         </nav>
-        <Header sharedData={this.state.sharedData.basic_info} />
+        <Header sharedData={sharedData.basic_info} />
         <div className="col-md-12 mx-auto text-center language">
           <div
-            onClick={() =>
-              this.applyPickedLanguage(
-                window.$primaryLanguage,
-                window.$secondaryLanguageIconId
-              )
-            }
             style={{ display: "inline" }}
           >
             <span
@@ -121,12 +102,6 @@ class App extends Component {
             ></span>
           </div>
           <div
-            onClick={() =>
-              this.applyPickedLanguage(
-                window.$secondaryLanguage,
-                window.$primaryLanguageIconId
-              )
-            }
             style={{ display: "inline" }}
           >
             <span
@@ -140,33 +115,34 @@ class App extends Component {
         </div>
         <About
           name="about"
-          resumeBasicInfo={this.state.resumeData.basic_info}
-          sharedBasicInfo={this.state.sharedData.basic_info}
+          resumeBasicInfo={resumeData.basic_info}
+          sharedBasicInfo={sharedData.basic_info}
         />
         <Element name="projects" className="element" >
           <Projects
-            resumeProjects={this.state.resumeData.projects}
-            resumeBasicInfo={this.state.resumeData.basic_info}
+            resumeProjects={resumeData.projects}
+            resumeBasicInfo={resumeData.basic_info}
           />
         </Element>
         <Skills
           name="skills"
-          sharedSkills={this.state.sharedData.skills}
-          resumeBasicInfo={this.state.resumeData.basic_info}
+          sharedSkills={sharedData.skills}
+          resumeBasicInfo={resumeData.basic_info}
         />
         <Element name="experience" className="element" >
           <Experience
-            resumeExperience={this.state.resumeData.experience}
-            resumeBasicInfo={this.state.resumeData.basic_info}
+            resumeExperience={resumeData.experience}
+            resumeBasicInfo={resumeData.basic_info}
           />
         </Element>
         <Footer
           name="links"
-          sharedBasicInfo={this.state.sharedData.basic_info}
+          sharedBasicInfo={sharedData.basic_info}
         />
       </div >
     );
   }
+
 }
 
 export default App;
