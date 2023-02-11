@@ -7,7 +7,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import { Link, Element, Events, animateScroll as scroll, scroller } from 'react-scroll'
+import { Link, Element, scroller } from 'react-scroll'
 
 
 class App extends Component {
@@ -19,13 +19,9 @@ class App extends Component {
       resumeData: {},
       sharedData: {},
     };
-    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
 
-  scrollToTop() {
-    scroll.scrollToTop();
-  }
   scrollTo() {
     scroller.scrollTo('scroll-to-element', {
       duration: 800,
@@ -33,35 +29,7 @@ class App extends Component {
       smooth: 'easeInOutQuart'
     })
   }
-  scrollToWithContainer() {
 
-    let goToContainer = new Promise((resolve, reject) => {
-
-      Events.scrollEvent.register('end', () => {
-        resolve();
-        Events.scrollEvent.remove('end');
-      });
-
-      scroller.scrollTo('scroll-container', {
-        duration: 800,
-        delay: 0,
-        smooth: 'easeInOutQuart'
-      });
-
-    });
-
-    goToContainer.then(() =>
-      scroller.scrollTo('scroll-container-second-element', {
-        duration: 800,
-        delay: 0,
-        smooth: 'easeInOutQuart',
-        containerId: 'scroll-container'
-      }));
-  }
-  componentWillUnmount() {
-    Events.scrollEvent.remove('begin');
-    Events.scrollEvent.remove('end');
-  }
   applyPickedLanguage(pickedLanguage, oppositeLangIconId) {
     this.swapCurrentlyActiveLanguage(oppositeLangIconId);
     document.documentElement.lang = pickedLanguage;
@@ -86,14 +54,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Events.scrollEvent.register('begin', function () {
-      console.log("begin", arguments);
-    });
-
-    Events.scrollEvent.register('end', function () {
-      console.log("end", arguments);
-    });
-
     this.loadSharedData();
     this.applyPickedLanguage(
       window.$primaryLanguage,

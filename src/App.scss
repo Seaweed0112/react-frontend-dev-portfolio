@@ -1,6 +1,6 @@
-@import '../src/scss/themes/theme-dark.scss';
-@import '../src/scss/themes/theme-light.scss';
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+@import "../src/scss/themes/theme-dark.scss";
+@import "../src/scss/themes/theme-light.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap");
 
 html {
 	font-size: 62.5%;
@@ -20,7 +20,7 @@ html {
 }
 
 .title-styles {
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-size: 250%;
 }
 
@@ -54,7 +54,7 @@ header {
 
 .project-date {
 	font-size: 16px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	padding: 8px 15px 2px 15px;
 	position: relative;
 	z-index: -500;
@@ -65,7 +65,7 @@ header {
 }
 
 .skills-tile {
-	background-color: transparentize(#F8F5F4, 0.95);
+	background-color: transparentize(#f8f5f4, 0.95);
 	padding: 10px 10px 5px 10px;
 	width: 100px;
 	margin: 5px 0 5px 0;
@@ -84,17 +84,17 @@ header h1 {
 	text-align: center;
 	font-weight: 600 !important;
 	color: #353239;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 	margin: 0 auto 18px auto;
 	width: 100%;
 }
 
 .slider-image {
-	border: 5px solid #D7CAAA;
+	border: 5px solid #d7caaa;
 }
 
 .slider-tab {
-	background-color: #D7CAAA;
+	background-color: #d7caaa;
 	height: 25px;
 }
 
@@ -114,7 +114,7 @@ header h1 {
 
 #about h1 {
 	padding-top: 5%;
-	font: 18px/24px 'opensans-bold', sans-serif;
+	font: 18px/24px "opensans-bold", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	color: black;
@@ -133,12 +133,12 @@ header h1 {
 	padding: 10px 10px 5px;
 	text-align: center;
 	text-decoration: none;
-	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-	-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-	box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-	-webkit-transition: all .20s linear;
-	-moz-transition: all .20s linear;
-	transition: all .20s linear;
+	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 	z-index: 0;
 	position: relative;
 }
@@ -156,14 +156,14 @@ header h1 {
 	-moz-transform: scale(1.01);
 	transform: scale(1.01);
 	z-index: 10;
-	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
 .project-title-settings {
 	margin-top: 5%;
-	font: 18px/24px 'opensans-bold', sans-serif;
+	font: 18px/24px "opensans-bold", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	color: black;
@@ -179,13 +179,13 @@ header h1 {
 	padding: 20px;
 	background-color: #e9d5a1;
 }
-  
+
 .navigation-wrapper a {
 	text-align: center;
 	text-decoration: none;
-	font: 24px/24px 'opensans-bold', sans-serif;
+	font: 24px/24px "opensans-bold", sans-serif;
 	transition: 0.2s ease-in-out;
-	color: #601700;
+	color: #353239;
 }
 
 .navigation-wrapper a:hover {
@@ -205,12 +205,12 @@ header h1 {
 	padding: 15px 15px 30px;
 	text-align: center;
 	text-decoration: none;
-	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-	-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-	box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-	-webkit-transition: all .20s linear;
-	-moz-transition: all .20s linear;
-	transition: all .20s linear;
+	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 	z-index: 0;
 	position: relative;
 }
@@ -224,7 +224,7 @@ header h1 {
 }
 
 .font-trebuchet {
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 #preview {
@@ -256,10 +256,10 @@ header h1 {
 	text-align: left !important;
 	padding: 5px 8px 5px 8px !important;
 	vertical-align: baseline;
-	background-color: #AE944F !important;
+	background-color: #ae944f !important;
 	color: white;
 	font-weight: lighter !important;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .experience-badge {
@@ -270,7 +270,7 @@ header h1 {
 	background-color: #f9f5e9 !important;
 	color: black;
 	font-weight: lighter !important;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .vertical-timeline-element-date {
@@ -311,7 +311,7 @@ header h1 {
 }
 
 .bars li em {
-	font: 15px 'opensans-bold', sans-serif;
+	font: 15px "opensans-bold", sans-serif;
 	color: #313131;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -400,7 +400,7 @@ header h1 {
 }
 
 #skills {
-	background: #1F1F1F;
+	background: #1f1f1f;
 	min-height: 200px;
 	width: 100%;
 	overflow: hidden;
@@ -410,7 +410,7 @@ header h1 {
 .section-title {
 	padding-top: 5%;
 	padding-bottom: 5%;
-	font: 18px/24px 'opensans-bold', sans-serif;
+	font: 18px/24px "opensans-bold", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	color: #fff;
@@ -425,7 +425,7 @@ header h1 {
 }
 
 footer {
-	background: #1F1F1F;
+	background: #1f1f1f;
 	min-height: 100px;
 	width: 100%;
 	overflow: hidden;
