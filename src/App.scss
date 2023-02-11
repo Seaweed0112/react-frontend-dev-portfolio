@@ -170,6 +170,29 @@ header h1 {
 	text-align: center;
 }
 
+.navigation-wrapper {
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: space-around;
+	height: 25px;
+	padding: 20px;
+	background-color: #e9d5a1;
+}
+  
+.navigation-wrapper a {
+	text-align: center;
+	text-decoration: none;
+	font: 24px/24px 'opensans-bold', sans-serif;
+	transition: 0.2s ease-in-out;
+	color: #601700;
+}
+
+.navigation-wrapper a:hover {
+	color: #b96a21;
+	text-decoration: none;
+}
+
 .polaroid img {
 	display: block;
 	max-width: 200px;

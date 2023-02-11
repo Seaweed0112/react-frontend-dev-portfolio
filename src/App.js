@@ -7,6 +7,8 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import { Link, Element, Events, animateScroll as scroll, scroller } from 'react-scroll'
+
 
 class App extends Component {
 
@@ -17,8 +19,49 @@ class App extends Component {
       resumeData: {},
       sharedData: {},
     };
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
+
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+  scrollTo() {
+    scroller.scrollTo('scroll-to-element', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    })
+  }
+  scrollToWithContainer() {
+
+    let goToContainer = new Promise((resolve, reject) => {
+
+      Events.scrollEvent.register('end', () => {
+        resolve();
+        Events.scrollEvent.remove('end');
+      });
+
+      scroller.scrollTo('scroll-container', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart'
+      });
+
+    });
+
+    goToContainer.then(() =>
+      scroller.scrollTo('scroll-container-second-element', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+        containerId: 'scroll-container'
+      }));
+  }
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
+  }
   applyPickedLanguage(pickedLanguage, oppositeLangIconId) {
     this.swapCurrentlyActiveLanguage(oppositeLangIconId);
     document.documentElement.lang = pickedLanguage;
@@ -43,6 +86,14 @@ class App extends Component {
   }
 
   componentDidMount() {
+    Events.scrollEvent.register('begin', function () {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register('end', function () {
+      console.log("end", arguments);
+    });
+
     this.loadSharedData();
     this.applyPickedLanguage(
       window.$primaryLanguage,
@@ -82,6 +133,14 @@ class App extends Component {
   render() {
     return (
       <div>
+        <nav>
+          <div className="navigation-wrapper nav navbar-nav">
+            <Link activeClass="active" className="navigation-link about" to="about" spy={true} smooth={true} duration={500} >About</Link>
+            <Link activeClass="active" className="navigation-link projects" to="projects" spy={true} smooth={true} duration={500}>Projects</Link>
+            <Link activeClass="active" className="navigation-link skills" to="skills" spy={true} smooth={true} duration={500} >Skills</Link>
+            <Link activeClass="active" className="navigation-link experience" to="experience" spy={true} smooth={true} duration={500}>Experience</Link>
+          </div>
+        </nav>
         <Header sharedData={this.state.sharedData.basic_info} />
         <div className="col-md-12 mx-auto text-center language">
           <div
@@ -120,22 +179,31 @@ class App extends Component {
           </div>
         </div>
         <About
+          name="about"
           resumeBasicInfo={this.state.resumeData.basic_info}
           sharedBasicInfo={this.state.sharedData.basic_info}
         />
-        <Projects
-          resumeProjects={this.state.resumeData.projects}
-          resumeBasicInfo={this.state.resumeData.basic_info}
-        />
+        <Element name="projects" className="element" >
+          <Projects
+            resumeProjects={this.state.resumeData.projects}
+            resumeBasicInfo={this.state.resumeData.basic_info}
+          />
+        </Element>
         <Skills
+          name="skills"
           sharedSkills={this.state.sharedData.skills}
           resumeBasicInfo={this.state.resumeData.basic_info}
         />
-        <Experience
-          resumeExperience={this.state.resumeData.experience}
-          resumeBasicInfo={this.state.resumeData.basic_info}
+        <Element name="experience" className="element" >
+          <Experience
+            resumeExperience={this.state.resumeData.experience}
+            resumeBasicInfo={this.state.resumeData.basic_info}
+          />
+        </Element>
+        <Footer
+          name="links"
+          sharedBasicInfo={this.state.sharedData.basic_info}
         />
-        <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
       </div >
     );
   }
