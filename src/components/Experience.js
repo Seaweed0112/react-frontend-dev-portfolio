@@ -6,9 +6,6 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import Badge from "react-bootstrap/Badge";
 import ExpDetailsModal from "./ExperienceDetailsModal";
-import { Icon } from '@iconify/react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import myIcon from "images/test.png"
 
 class Experience extends Component {
   constructor(props) {
@@ -29,7 +26,7 @@ class Experience extends Component {
       var work = this.props.resumeExperience.map(function (work, i) {
         const technologies = work.technologies;
         const mainTechnologies = work.mainTech;
-        var image = work.image;
+        // var image = work.image;
         var mainTech = mainTechnologies.map((technology, i) => {
           return (
             <Badge pill className="main-badge mr-2 mb-2" key={i}>
@@ -53,10 +50,7 @@ class Experience extends Component {
               color: "#fff",
               textAlign: "center",
             }}
-            // icon={<i className="fab fa-docker experience-icon"></i>}
-            // icon={<FontAwesomeIcon icon="fas fa-code" />}
-            // icon={<iconify-icon icon="ic:round-code-off"></iconify-icon>}
-            icon={<img src="images/test.png" alt="myicon" />}
+            icon={<i className="fas fa-code experience-icon"></i>}
             key={i}
           >
             <div onClick={() => detailsModalShow(work)}>
