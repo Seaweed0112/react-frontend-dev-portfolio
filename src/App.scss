@@ -135,6 +135,16 @@ header h1 {
     text-align: center;
 }
 
+.year-badge {
+    text-align: left !important;
+    padding: 5px 8px 5px 8px !important;
+    vertical-align: baseline;
+    background-color: rgb(47, 157, 165) !important;
+    color: white;
+    font: 18px/24px "opensans-bold", sans-serif;
+    // font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
 .foto img {
     display: block;
     width: 100%;
@@ -185,13 +195,14 @@ header h1 {
 }
 
 .navigation-wrapper {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     align-items: center;
     background-color: #e9d5a1;
     box-sizing: border-box;
     display: flex;
     height: 25px;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 100%;
     top: 0;
     transition: all 0.2s ease;

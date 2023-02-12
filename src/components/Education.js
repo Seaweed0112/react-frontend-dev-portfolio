@@ -1,4 +1,7 @@
-import { Card, CardBody, Badge } from "reactstrap";
+import { Card, CardBody } from "reactstrap";
+import Badge from "react-bootstrap/Badge";
+// import Card from "react-bootstrap/Card";
+// import CardBody from "react-bootstrap/Card";
 import { Fade } from "react-reveal";
 import React, { Component } from "react";
 
@@ -27,11 +30,11 @@ class Education extends Component {
                             }}>
                                 <div className="d-flex px-3">
                                     <div className="pl-4">
-                                        <p className="h1 text-info">
+                                        <p className="h1">
                                             {education.school}
                                         </p>
                                         <p className="h3">{education.degree}</p>
-                                        <Badge color="info" className=" mr-1">
+                                        <Badge className="year-badge mr-1">
                                             {education.years}
                                         </Badge>
                                         {education.grade && (
