@@ -5,6 +5,7 @@
     "section_name": {
       "about": "About me",
       "projects": "Projects",
+      "education": "Education",
       "skills": "Skills",
       "experience": "Experience"
     }
@@ -60,7 +61,57 @@
       ]
     }
   ],
+  "education": [
+    {
+      "school": "National Taiwan University",
+      "degree": "Bachelor of Science in Chemistry",
+      "years": "09.2015 - 06.2019",
+      "image": "images/experiences/houzz/p1.png",
+      "coursework": "Coursework: Calculus, Linear Algebra, Discrete Mathematics, Ordinary Differential Equations, Quantum Chemistry, Electricity and Magnetism, Advanced Analytical Chemistry",
+      "description": []
+    },
+    {
+      "school": "National Taiwan University",
+      "degree": "Quantitative Finance Porgram",
+      "years": "09.2018 - 06.2019",
+      "image": "images/experiences/houzz/p1.png",
+      "coursework": "Coursework: Financial Engineering and Computation, Quantitative Methods in Finance, Principles of Financial Computing, Modern Investment Management, Special Topics on Financial Engineering",
+      "description": []
+    },
+    {
+      "school": "University of Washington",
+      "degree": "Master of Science in Electrical Engineering",
+      "years": "09.2022 - present",
+      "image": "images/experiences/houzz/p1.png",
+      "coursework": "Coursework: Network Security & Cryptography, Probability & Stochastic Process, AI for Engineers, Computer-Communication Network, Distributed System",
+      "description": []
+    }
+  ],
   "experience": [
+    {
+      "company": "Kronos Research",
+      "title": "Quantitative Analyst",
+      "years": "04.2020 - 07.2020",
+      "mainTech": [
+        "Python"
+      ],
+      "technologies": [
+        "C++"
+      ]
+    },
+    {
+      "company": "Quantrend",
+      "title": "Backend Engineer",
+      "years": "08.2020 - 05.2021",
+      "mainTech": [
+        "Rust"
+      ],
+      "technologies": [
+        "AWS",
+        "Python",
+        "Tensorflow"
+      ]
+    },
     {
       "company": "Houzz",
       "title": "Data Engineer",
@@ -85,30 +136,6 @@
         "Communicated with data scientists to solve ad hoc data pipeline issues",
         "Developed new tools to assist data scientists and product teams operate more efficiently and reduce data processing time (Python)",
         "Established an Airflow alert system to monitor the quality of data and failures, making the debugging process easier (Airflow, Python)"
-      ]
-    },
-    {
-      "company": "Quantrend",
-      "title": "Backend Engineer",
-      "years": "08.2020 - 05.2021",
-      "mainTech": [
-        "Rust"
-      ],
-      "technologies": [
-        "AWS",
-        "Python",
-        "Tensorflow"
-      ]
-    },
-    {
-      "company": "Kronos Research",
-      "title": "Quantitative Analyst",
-      "years": "04.2020 - 07.2020",
-      "mainTech": [
-        "Python"
-      ],
-      "technologies": [
-        "C++"
       ]
     }
   ]
