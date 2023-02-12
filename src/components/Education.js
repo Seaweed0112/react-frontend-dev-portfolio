@@ -12,12 +12,6 @@ class Education extends Component {
     }
 
     render() {
-        let detailsModalShow = (data) => {
-            this.setState({ detailsModalShow: true, deps: data });
-        };
-
-        let detailsModalClose = () =>
-            this.setState({ detailsModalShow: false });
         if (this.props.resumeEducation && this.props.resumeBasicInfo) {
             var sectionName = this.props.resumeBasicInfo.section_name.education;
             var education = this.props.resumeEducation.map(function (
@@ -26,14 +20,18 @@ class Education extends Component {
                 return (
                     <Fade left duration={2000}>
                         <Card className="card-lift--hover shadow mt-4">
-                            <CardBody>
+                            <CardBody style={{
+                                height: "auto",
+                                fontSize: "132%",
+                                lineHeight: "200%",
+                            }}>
                                 <div className="d-flex px-3">
                                     <div className="pl-4">
-                                        <h5 className="text-info">
+                                        <p className="h1 text-info">
                                             {education.school}
-                                        </h5>
-                                        <h6>{education.degree}</h6>
-                                        <Badge color="info" className="mr-1">
+                                        </p>
+                                        <p className="h3">{education.degree}</p>
+                                        <Badge color="info" className=" mr-1">
                                             {education.years}
                                         </Badge>
                                         {education.grade && (
@@ -50,14 +48,14 @@ class Education extends Component {
                                         <ul>
                                             {education.description
                                                 ? education.description.map(
-                                                      (desc) => {
-                                                          return (
-                                                              <li key={desc}>
-                                                                  {desc}
-                                                              </li>
-                                                          );
-                                                      }
-                                                  )
+                                                    (desc) => {
+                                                        return (
+                                                            <li key={desc}>
+                                                                {desc}
+                                                            </li>
+                                                        );
+                                                    }
+                                                )
                                                 : null}
                                         </ul>
                                     </div>
@@ -71,31 +69,17 @@ class Education extends Component {
 
         return (
             <section id="education">
-                {/* <div className="container d-flex justify-content-center align-items-center h-100">
-                    <div className="row">
-                        {cards.map(({ title, image, url, id }) => (
-                            <div className="col-md-4" key={id}>
-                                <Card
-                                    imageSource={image}
-                                    title={title}
-                                    url={url}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div> */}
                 <div className="col-md-12">
                     <h1 className="section-title" style={{ color: "black" }}>
                         <span>{sectionName}</span>
                     </h1>
-                    <div className="col-md-12 mx-auto">
-                        <div className="row mx-auto">{education}</div>
+                    <div className="container d-flex justify-content-center align-items-center h-75 col-md-12 mx-auto">
+                        <div className="row mx-auto">
+                            <div className="col-md-8 offset-md-2  mx-auto mb-5" >
+                                {education}
+                            </div>
+                        </div>
                     </div>
-                    {/* <ProjectDetailsModal
-                        show={this.state.detailsModalShow}
-                        onHide={detailsModalClose}
-                        data={this.state.deps}
-                    /> */}
                 </div>
             </section>
         );

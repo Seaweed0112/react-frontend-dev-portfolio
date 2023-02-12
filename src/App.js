@@ -84,6 +84,7 @@ function App() {
         <nav className={x.join(" ")}>
           <div className="navigation-wrapper nav navbar-nav">
             <Link activeClass="active" className="navigation-link about" to="about" spy={true} smooth={true} duration={500} >About</Link>
+            <Link activeClass="active" className="navigation-link education" to="education" spy={true} smooth={true} duration={500} >Education</Link>
             <Link activeClass="active" className="navigation-link projects" to="projects" spy={true} smooth={true} duration={500}>Projects</Link>
             <Link activeClass="active" className="navigation-link skills" to="skills" spy={true} smooth={true} duration={500} >Skills</Link>
             <Link activeClass="active" className="navigation-link experience" to="experience" spy={true} smooth={true} duration={500}>Experience</Link>
