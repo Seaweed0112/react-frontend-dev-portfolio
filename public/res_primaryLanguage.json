@@ -89,30 +89,6 @@
   ],
   "experience": [
     {
-      "company": "Kronos Research",
-      "title": "Quantitative Analyst",
-      "years": "04.2020 - 07.2020",
-      "mainTech": [
-        "Python"
-      ],
-      "technologies": [
-        "C++"
-      ]
-    },
-    {
-      "company": "Quantrend",
-      "title": "Backend Engineer",
-      "years": "08.2020 - 05.2021",
-      "mainTech": [
-        "Rust"
-      ],
-      "technologies": [
-        "AWS",
-        "Python",
-        "Tensorflow"
-      ]
-    },
-    {
       "company": "Houzz",
       "title": "Data Engineer",
       "years": "05.2021 - 09.2022",
@@ -136,6 +112,30 @@
         "Communicated with data scientists to solve ad hoc data pipeline issues",
         "Developed new tools to assist data scientists and product teams operate more efficiently and reduce data processing time (Python)",
         "Established an Airflow alert system to monitor the quality of data and failures, making the debugging process easier (Airflow, Python)"
+      ]
+    },
+    {
+      "company": "Quantrend",
+      "title": "Backend Engineer",
+      "years": "08.2020 - 05.2021",
+      "mainTech": [
+        "Rust"
+      ],
+      "technologies": [
+        "AWS",
+        "Python",
+        "Tensorflow"
+      ]
+    },
+    {
+      "company": "Kronos Research",
+      "title": "Quantitative Analyst",
+      "years": "04.2020 - 07.2020",
+      "mainTech": [
+        "Python"
+      ],
+      "technologies": [
+        "C++"
       ]
     }
   ]

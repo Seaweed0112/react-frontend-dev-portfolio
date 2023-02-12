@@ -88,6 +88,7 @@ function App() {
             <Link activeClass="active" className="navigation-link projects" to="projects" spy={true} smooth={true} duration={500}>Projects</Link>
             <Link activeClass="active" className="navigation-link skills" to="skills" spy={true} smooth={true} duration={500} >Skills</Link>
             <Link activeClass="active" className="navigation-link experience" to="experience" spy={true} smooth={true} duration={500}>Experience</Link>
+            <Link activeClass="active" className="navigation-link links" to="links" spy={true} smooth={true} duration={500}>Links</Link>
           </div>
         </nav>
         <Header sharedData={sharedData.basic_info} />
@@ -142,10 +143,11 @@ function App() {
             resumeBasicInfo={resumeData.basic_info}
           />
         </Element>
-        <Footer
-          name="links"
-          sharedBasicInfo={sharedData.basic_info}
-        />
+        <Element name="links" className="element" >
+          <Footer
+            sharedBasicInfo={sharedData.basic_info}
+          />
+        </Element>
       </div >
     );
   }

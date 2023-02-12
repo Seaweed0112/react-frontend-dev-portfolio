@@ -42,6 +42,9 @@ class About extends Component {
                     icon={rustIcon}
                     style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
                   />
+                  <p className="my-3">
+                    kaijen.zheng@gmail.com
+                  </p>
                 </span>
               </div>
             </div>
