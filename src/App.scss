@@ -121,6 +121,20 @@ header h1 {
     text-align: center;
 }
 
+#education {
+    background: #efe1bd;
+    overflow: hidden;
+}
+
+#education h1 {
+    padding-top: 5%;
+    font: 18px/24px "opensans-bold", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: black;
+    text-align: center;
+}
+
 .foto img {
     display: block;
     width: 100%;
@@ -374,8 +388,8 @@ header h1 {
     color: black !important;
 }
 
-#portfolio {
-    background: #efe1bd;
+#projects {
+    background: #fff;
     padding-bottom: 5%;
 }
 

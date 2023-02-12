@@ -6,6 +6,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Education from "./components/Education.js"
 import { Link, Element } from 'react-scroll'
 
 
@@ -117,6 +118,11 @@ function App() {
           name="about"
           resumeBasicInfo={resumeData.basic_info}
           sharedBasicInfo={sharedData.basic_info}
+        />
+        <Education
+          name="education"
+          resumeEducation={resumeData.education}
+          resumeBasicInfo={resumeData.basic_info}
         />
         <Element name="projects" className="element" >
           <Projects
