@@ -115,7 +115,7 @@
       ]
     },
     {
-      "company": "Quantrend",
+      "company": "Quantrend Technology",
       "title": "Backend Engineer",
       "years": "08.2020 - 05.2021",
       "mainTech": [
@@ -124,7 +124,14 @@
       "technologies": [
         "AWS",
         "Python",
-        "Tensorflow"
+        "Tensorflow",
+        "Crypto Trading",
+        "Backtesting"
+      ],
+      "description": [
+        "Built an efficient, extendable data processing pipeline for machine learning model with multi-thread technique, which can process tens of millions of data simultaneously (Rust)",
+        "Assisted with the development and implementation of systems that allow traders to process massive amounts of data (Rust)",
+        "Cooperated with traders and developed tools to quickly process and analyze large amount of data (Rust)"
       ]
     },
     {
@@ -135,7 +142,14 @@
         "Python"
       ],
       "technologies": [
-        "C++"
+        "C++",
+        "Scikit-learn",
+        "Pandas"
+      ],
+      "description": [
+        "Developed automated tool to analyze tens of thousands of trading data (Python)",
+        "Developed trading methods using statistical and machine learning models (Python, Scikit-learn)",
+        "Collected and transformed market data to aid discretionary trading (Python)"
       ]
     }
   ]
