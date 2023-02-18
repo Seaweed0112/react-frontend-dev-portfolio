@@ -5,22 +5,16 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Badge from "react-bootstrap/Badge";
-import ExpDetailsModal from "./ExperienceDetailsModal";
 
 class Experience extends Component {
   constructor(props) {
     super(props);
     this.state = {
       deps: {},
-      detailsModalShow: false,
     };
   }
 
   render() {
-    let detailsModalShow = (data) => {
-      this.setState({ detailsModalShow: true, deps: data });
-    };
-    let detailsModalClose = () => this.setState({ detailsModalShow: false });
     if (this.props.resumeExperience && this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.experience;
       var work = this.props.resumeExperience.map(function (work, i) {
@@ -53,7 +47,7 @@ class Experience extends Component {
             icon={<i className="far fa-code experience-icon"></i>}
             key={i}
           >
-            <div onClick={() => detailsModalShow(work)}>
+            <div>
               <div style={{ textAlign: "left", marginBottom: "4px" }}>
                 {mainTech}
               </div>
@@ -71,6 +65,19 @@ class Experience extends Component {
               </h4>
               <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
             </div>
+            <ul>
+              {work.description
+                ? work.description.map(
+                  (desc) => {
+                    return (
+                      <li key={desc}>
+                        {desc}
+                      </li>
+                    );
+                  }
+                )
+                : null}
+            </ul>
           </VerticalTimelineElement>
         );
       });
@@ -79,22 +86,15 @@ class Experience extends Component {
     return (
       <section id="resume" className="pb-5">
         <div className="col-md-12 mx-auto">
-          <div className="col-md-12">
-            <h1 className="section-title" style={{ color: "black" }}>
-              <span className="text-black" style={{ textAlign: "center" }}>
-                {sectionName}
-              </span>
-            </h1>
-          </div>
+          <h1 className="section-title" style={{ color: "black" }}>
+            <span className="text-black" style={{ textAlign: "center" }}>
+              {sectionName}
+            </span>
+          </h1>
         </div>
         <div className="col-md-8 mx-auto">
           <VerticalTimeline>
             {work}
-            <ExpDetailsModal
-              show={this.state.detailsModalShow}
-              onHide={detailsModalClose}
-              data={this.state.deps}
-            />
             <VerticalTimelineElement
               iconStyle={{
                 background: "#AE944F",
@@ -104,7 +104,9 @@ class Experience extends Component {
               icon={
                 <i className="fas fa-hourglass-start mx-auto experience-icon"></i>
               }
-            />
+            >
+
+            </VerticalTimelineElement>
           </VerticalTimeline>
 
         </div>

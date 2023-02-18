@@ -128,7 +128,7 @@ header h1 {
 
 #education h1 {
     // padding-top: 5%;
-    font: 18px/24px "opensans-bold", sans-serif;
+    font: 24px/30px "opensans-bold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: black;
@@ -141,7 +141,7 @@ header h1 {
     vertical-align: baseline;
     background-color: rgb(47, 157, 165) !important;
     color: white;
-    font: 18px/24px "opensans-bold", sans-serif;
+    font: 24px/28px "opensans-bold", sans-serif;
     // font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -281,6 +281,10 @@ header h1 {
     background: #efe1bd;
 }
 
+#resume h1 {
+    font: 24px/30px;
+}
+
 .experience-icon {
     font-size: 300%;
     margin-top: 25%;
@@ -288,7 +292,7 @@ header h1 {
 }
 
 .main-badge {
-    font-size: 13px !important;
+    font-size: 18px !important;
     text-align: left !important;
     padding: 5px 8px 5px 8px !important;
     vertical-align: baseline;
@@ -299,7 +303,7 @@ header h1 {
 }
 
 .experience-badge {
-    font-size: 11px !important;
+    font-size: 18px !important;
     text-align: left !important;
     padding: 5px 8px 5px 8px !important;
     vertical-align: baseline;
@@ -307,6 +311,14 @@ header h1 {
     color: black;
     font-weight: lighter !important;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.vertical-timeline-element-title {
+    font-size: 32px;
+}
+
+.vertical-timeline-element-subtitle {
+    font-size: 26px;
 }
 
 .vertical-timeline-element-date {
