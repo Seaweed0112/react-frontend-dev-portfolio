@@ -28,6 +28,11 @@
         "level": "65"
       },
       {
+        "name": "C",
+        "class": "devicon-c-plain",
+        "level": "65"
+      },
+      {
         "name": "Rust",
         "class": "devicon-rust-plain",
         "level": "90"
@@ -80,6 +85,11 @@
       {
         "name": "Git",
         "class": "devicon-git-plain",
+        "level": "60"
+      },
+      {
+        "name": "Jenkins",
+        "class": "devicon-jenkins-plain",
         "level": "60"
       }
     ]

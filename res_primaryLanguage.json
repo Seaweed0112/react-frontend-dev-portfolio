@@ -59,6 +59,44 @@
           "name": "Python"
         }
       ]
+    },
+    {
+      "title": "A* Algorithm",
+      "startDate": "2022",
+      "description": "A simple A-star algorithm can be used to find the shortest path to the goal when there are rectangular obstacles present.",
+      "images": [
+        "images/projects/astar/p1.jpeg"
+      ],
+      "url": "https://github.com/Seaweed0112/a-star-algorithm",
+      "technologies": [
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        }
+      ]
+    },
+    {
+      "title": "Worldquant International Quant Championship",
+      "startDate": "2019",
+      "description": "Top 5 in Worldquant International Quant Championship, Stage 2 National Round Finalist. Contrived strategies to make bigger profits with less risks and elaborated ideas on the stage",
+      "images": [
+        "images/projects/worldquant/p1.png"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "",
+          "name": "Quant Analysis"
+        },
+        {
+          "class": "",
+          "name": "Trading Algorithm"
+        },
+        {
+          "class": "",
+          "name": "Alpha Development"
+        }
+      ]
     }
   ],
   "education": [
@@ -97,10 +135,13 @@
         "Python"
       ],
       "technologies": [
+        "Data Pipeline",
+        "ETL",
         "Airflow",
         "Hive",
         "Luigi",
         "Hadoop",
+        "Jenkins",
         "Kubernetes",
         "JavaScript",
         "React"
@@ -150,6 +191,40 @@
         "Developed automated tool to analyze tens of thousands of trading data (Python)",
         "Developed trading methods using statistical and machine learning models (Python, Scikit-learn)",
         "Collected and transformed market data to aid discretionary trading (Python)"
+      ]
+    },
+    {
+      "company": "Department of Chemistry, National Taiwan University ",
+      "title": "Undergraduate student researcher",
+      "years": "10.2017 - 06.2019",
+      "mainTech": [
+        ""
+      ],
+      "technologies": [
+        "Python",
+        "SEM",
+        "TEM",
+        "Cyclic Voltammetry"
+      ],
+      "description": [
+        "Investigated the Photoelectrochemical CO2 Reduction: synthesized Cu-based catalysts in order to find a better catalyst for CO2  reduction",
+        "Built a program to automatically transform experiment raw data to human readable plot (Python)"
+      ]
+    },
+    {
+      "company": "Academia Sinica Institute of Atomic and Molecular Sciences",
+      "title": "Research Intern",
+      "years": "07.2016 - 08.2016",
+      "mainTech": [
+        ""
+      ],
+      "technologies": [
+        "UV Spectrum",
+        "Matlab"
+      ],
+      "description": [
+        "Collected UV absorbance spectrum to investigated the Criegee Intermediate in the Atmosphere",
+        "Analyzed the data with Matlab to determine the reaction rate of Criegee intermediate with H2S (Matlab)"
       ]
     }
   ]
