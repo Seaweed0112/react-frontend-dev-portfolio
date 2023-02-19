@@ -65,7 +65,7 @@ class Experience extends Component {
               </h4>
               <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
             </div>
-            <ul>
+            <ul className="work-description">
               {work.description
                 ? work.description.map(
                   (desc) => {
@@ -92,7 +92,7 @@ class Experience extends Component {
             </span>
           </h1>
         </div>
-        <div className="col-md-8 mx-auto">
+        <div className="col-md-10 mx-auto">
           <VerticalTimeline>
             {work}
             <VerticalTimelineElement

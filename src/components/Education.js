@@ -45,7 +45,7 @@ class Education extends Component {
                                                 {education.grade}
                                             </Badge>
                                         )}
-                                        <p className="description mt-3">
+                                        <p className="education-description mt-3">
                                             {education.coursework}
                                         </p>
                                         <ul>

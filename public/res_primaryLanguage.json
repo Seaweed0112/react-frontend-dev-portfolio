@@ -97,10 +97,13 @@
         "Python"
       ],
       "technologies": [
+        "Data Pipeline",
+        "ETL",
         "Airflow",
         "Hive",
         "Luigi",
         "Hadoop",
+        "Jenkins",
         "Kubernetes",
         "JavaScript",
         "React"
