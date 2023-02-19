@@ -155,6 +155,7 @@ p.education-description {
 .foto img {
     display: block;
     width: 100%;
+    object-fit: scale-down;
 }
 
 .foto div {
@@ -373,6 +374,9 @@ ul.work-description {
 
 .modal-inside .modal-content {
     background: white;
+    img {
+        object-fit: scale-down;
+    }
 }
 
 .bars {
