@@ -97,6 +97,33 @@
           "name": "Alpha Development"
         }
       ]
+    },
+    {
+      "title": "CO2 Reduction Research Article, JACS",
+      "startDate": "2019",
+      "description": "Dynamic Reoxidation/Reduction-Driven Atomic Interdiffusion for Highly Selective CO2 Reduction toward Methane, Journal of the American Chemical Society",
+      "images": [
+        "images/projects/co2/p1.gif"
+      ],
+      "url": "https://pubs.acs.org/doi/10.1021/jacs.0c01859",
+      "technologies": [
+        {
+          "class": "",
+          "name": "Scanning Electron Microscope"
+        },
+        {
+          "class": "",
+          "name": "Transmission electron microscopy"
+        },
+        {
+          "class": "",
+          "name": "Cyclic Voltammetry"
+        },
+        {
+          "class": "",
+          "name": "Gas Chromatography-Mass Spectrometry"
+        }
+      ]
     }
   ],
   "education": [
