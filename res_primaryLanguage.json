@@ -14,22 +14,22 @@
     {
       "title": "HTTP Server",
       "startDate": "2023",
-      "description": "Simple HTTP server",
+      "description": "A high-performance HTTP server capable of concurrently handling multiple client requests",
       "images": [
         "images/projects/simple_http_server/p1.png"
       ],
       "url": "https://github.com/Seaweed0112/simple-c-http-server",
       "technologies": [
         {
-          "class": "devicon-cplusplus-plain",
-          "name": "C++"
+          "class": "devicon-c-plain",
+          "name": "C"
         }
       ]
     },
     {
       "title": "VGG Classification for MNIST fashion dataset",
       "startDate": "2022",
-      "description": "Project during AI for engineer course",
+      "description": "During the AI for Engineer course, I worked on a project to develop and train a VGG neural network to classify the MNIST Fashion dataset with high accuracy rates. This project demonstrated my proficiency in deep learning and computer vision techniques. To optimize the performance of the VGG model, I designed and executed experiments that compared different model architectures and hyperparameters on the MNIST Fashion dataset. Through this experimentation, I showcased my advanced skills in machine learning optimization and experimentation",
       "images": [
         "images/projects/vgg/p1.png"
       ],
@@ -48,7 +48,7 @@
     {
       "title": "RFID MMAP protocol and attack",
       "startDate": "2022",
-      "description": "Project during Cryptography and Network Security course",
+      "description": "During my Cryptography and Network Security course, I worked on a project to develop and implement an RFID MMAP Oracle system. As part of the project, I also designed and executed a series of attacks to identify potential security vulnerabilities in the system.",
       "images": [
         "images/projects/crypto/p1.png"
       ],
@@ -78,7 +78,7 @@
     {
       "title": "Worldquant International Quant Championship",
       "startDate": "2019",
-      "description": "Top 5 in Worldquant International Quant Championship, Stage 2 National Round Finalist. Contrived strategies to make bigger profits with less risks and elaborated ideas on the stage",
+      "description": "As a participant in the WorldQuant Trading Algorithm Competition, I was part of a team that achieved impressive results, ranking among the Top 5 in the WorldQuant International Quant Championship and becoming a finalist in the Stage 2 National Round. In this highly competitive arena, we developed and implemented innovative trading strategies designed to maximize profits while minimizing risks. We presented our ideas on the national stage and engaged in extensive research, reading and analyzing a variety of quantitative finance journals. Through this experience, I honed my skills in quantitative analysis, financial modeling, and teamwork, and gained valuable insights into the fast-paced and dynamic world of trading algorithms.",
       "images": [
         "images/projects/worldquant/p1.png"
       ],
@@ -174,12 +174,12 @@
         "React"
       ],
       "description": [
-        "Revamped internal website in cooperation with teammates to facilitate pipeline jobs monitoring (Python, Flask, HTML, CSS)",
-        "Resolved complex technical issue that blocked production deployment",
-        "Built an internal website for monitoring Hadoop cluster machines health status and managing nodes (JavaScript, CSS, HTML, Node.js, Kubernetes)",
-        "Communicated with data scientists to solve ad hoc data pipeline issues",
-        "Developed new tools to assist data scientists and product teams operate more efficiently and reduce data processing time (Python)",
-        "Established an Airflow alert system to monitor the quality of data and failures, making the debugging process easier (Airflow, Python)"
+        "Collaborated with cross-functional teams to revamp the internal website, enabling efficient monitoring of pipeline jobs using Python, Flask, HTML, and CSS",
+        "Successfully resolved complex technical issues to unblock production deployment",
+        "Built an internal website using JavaScript, CSS, HTML, Node.js, and Kubernetes to monitor the health status of Hadoop cluster machines and manage nodes, contributing to streamlined data processing workflows",
+        "Effectively communicated with data scientists to identify and resolve ad hoc data pipeline issues, promoting efficient and accurate data analysis",
+        "Developed new tools using Python to facilitate the work of data scientists and product teams, resulting in increased operational efficiency and reduced data processing time",
+        "Implemented an Airflow alert system using Python to monitor data quality and detect failures, simplifying the debugging process and ensuring high data accuracy standards"
       ]
     },
     {
@@ -197,9 +197,8 @@
         "Backtesting"
       ],
       "description": [
-        "Built an efficient, extendable data processing pipeline for machine learning model with multi-thread technique, which can process tens of millions of data simultaneously (Rust)",
-        "Assisted with the development and implementation of systems that allow traders to process massive amounts of data (Rust)",
-        "Cooperated with traders and developed tools to quickly process and analyze large amount of data (Rust)"
+        "Designed and implemented an efficient and extendable data processing pipeline for a machine learning model using Rust’s multi-threading capabilities, allowing simultaneous processing of tens of millions of data points",
+        "Collaborated closely with traders to develop tools and strategies for quickly processing and analyzing large amounts of data, supporting efficient and effective decision-making in the highly competitive crypto trading market"
       ]
     },
     {
@@ -215,9 +214,9 @@
         "Pandas"
       ],
       "description": [
-        "Developed automated tool to analyze tens of thousands of trading data (Python)",
-        "Developed trading methods using statistical and machine learning models (Python, Scikit-learn)",
-        "Collected and transformed market data to aid discretionary trading (Python)"
+        "Designed and developed an automated tool using Python to analyze tens of thousands of trading data, enabling rapid identification of trading opportunities and optimization of trading strategies",
+        "Leveraged statistical and machine learning models, including Scikit-learn, to develop and refine trading methods, resulting in improved profitability and risk management for the trading firm",
+        "Collected and transformed market data using Python to support discretionary trading, providing valuable insights and enhancing the accuracy of trading decisions"
       ]
     },
     {
@@ -231,11 +230,14 @@
         "Python",
         "SEM",
         "TEM",
-        "Cyclic Voltammetry"
+        "Cyclic Voltammetry",
+        "GC/MS"
       ],
       "description": [
-        "Investigated the Photoelectrochemical CO2 Reduction: synthesized Cu-based catalysts in order to find a better catalyst for CO2  reduction",
-        "Built a program to automatically transform experiment raw data to human readable plot (Python)"
+        "Investigated the Photoelectrochemical CO2 Reduction by synthesizing Cu-based catalysts and utilizing TEM and SEM to investigate their surface properties",
+        "Conducted experiments using Cyclic Voltametry and GC/MS to test the properties of the catalysts and evaluated their efficiency in CO2 reduction",
+        "Developed a program using Python to automate the transformation of experiment raw data into human-readable plots, improving the efficiency and accuracy of data analysis",
+        "Collaborated with other researchers to analyze and interpret experimental results and contributed to the publication of research findings in peer-reviewed journals"
       ]
     },
     {
@@ -246,12 +248,14 @@
         ""
       ],
       "technologies": [
+        "Optical Table",
         "UV Spectrum",
         "Matlab"
       ],
       "description": [
-        "Collected UV absorbance spectrum to investigated the Criegee Intermediate in the Atmosphere",
-        "Analyzed the data with Matlab to determine the reaction rate of Criegee intermediate with H2S (Matlab)"
+        "Conducted research on the Criegee Intermediate in the Atmosphere, collecting UV absorbance spectrum data to analyze the reaction rate with H2S",
+        "Assisted with the setup of the optical table for the experiment, ensuring proper calibration and accurate measurements",
+        "Utilized Matlab to analyze and interpret collected data, determining the reaction rate of the Criegee intermediate with H2S"
       ]
     }
   ]
