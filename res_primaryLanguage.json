@@ -1,7 +1,7 @@
 {
   "basic_info": {
     "description_header": "Hi",
-    "description": "Hello, my name is Kai-Jen and I am a master student at the University of Washington studying Electrical Engineering. I am a skilled software developer with experience in C++, Python, Rust, Java, and Javascript. I am currently taking courses in computer networks and distributed systems, and have begun a project on cybersecurity sandboxing. As a student and a developer, I am passionate about technology and its potential to change the world. I am eager to apply my skills and knowledge in a software engineering internship for the summer of 2023. Thank you for visiting my profile.",
+    "description": "Hello, my name is Kai-Jen and I am a master student at the University of Washington studying Electrical Engineering. I am a skilled software developer with experience in C++, Python, Rust, Java, and Javascript. I am currently looking for full-time software engineer position. As a student and a developer, I am passionate about technology and its potential to change the world. Thank you for visiting my profile.",
     "section_name": {
       "about": "About me",
       "projects": "Projects",
@@ -128,11 +128,11 @@
   ],
   "education": [
     {
-      "school": "National Taiwan University",
-      "degree": "Bachelor of Science in Chemistry",
-      "years": "09.2015 - 06.2019",
+      "school": "University of Washington",
+      "degree": "Master of Science in Electrical Engineering",
+      "years": "09.2022 - present",
       "image": "images/experiences/houzz/p1.png",
-      "coursework": "Coursework: Calculus, Linear Algebra, Discrete Mathematics, Ordinary Differential Equations, Quantum Chemistry, Electricity and Magnetism, Advanced Analytical Chemistry",
+      "coursework": "Coursework: Network Security & Cryptography, Probability & Stochastic Process, AI for Engineers, Computer-Communication Network, Distributed System, Computer Vision, Quantum Optics",
       "description": []
     },
     {
@@ -144,15 +144,33 @@
       "description": []
     },
     {
-      "school": "University of Washington",
-      "degree": "Master of Science in Electrical Engineering",
-      "years": "09.2022 - present",
+      "school": "National Taiwan University",
+      "degree": "Bachelor of Science in Chemistry",
+      "years": "09.2015 - 06.2019",
       "image": "images/experiences/houzz/p1.png",
-      "coursework": "Coursework: Network Security & Cryptography, Probability & Stochastic Process, AI for Engineers, Computer-Communication Network, Distributed System",
+      "coursework": "Coursework: Calculus, Linear Algebra, Discrete Mathematics, Ordinary Differential Equations, Quantum Chemistry, Electricity and Magnetism, Advanced Analytical Chemistry",
       "description": []
     }
   ],
   "experience": [
+    {
+      "company": "Ridge Security",
+      "title": "Software Engineer Intern",
+      "years": "06.2023 - 08.2023",
+      "image": "images/experiences/ridge/ridge.png",
+      "mainTech": [
+        "Python"
+      ],
+      "technologies": [
+        "Cybersecurity",
+        "Penetration Testing",
+        "Exploit Development",
+        "Reverse Engineering"
+      ],
+      "description": [
+        "Developed exploits for specific Common Vulnerability Exposures (CVE) as a part of automated penetration test solution"
+      ]
+    },
     {
       "company": "Houzz",
       "title": "Data Engineer",
@@ -197,7 +215,7 @@
         "Backtesting"
       ],
       "description": [
-        "Designed and implemented an efficient and extendable data processing pipeline for a machine learning model using Rust’s multi-threading capabilities, allowing simultaneous processing of tens of millions of data points",
+        "Designed and implemented an efficient and extendable data processing pipeline for a machine learning model using Rust's multi-threading capabilities, allowing simultaneous processing of tens of millions of data points",
         "Collaborated closely with traders to develop tools and strategies for quickly processing and analyzing large amounts of data, supporting efficient and effective decision-making in the highly competitive crypto trading market"
       ]
     },
